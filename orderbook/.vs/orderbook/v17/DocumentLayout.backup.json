@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hassa\\OneDrive\\Desktop\\Projects\\Quant--order-book-cpp\\orderbook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D26B1DC-363C-4F99-AE04-FA8FC16D2271}|orderbook.vcxproj|C:\\Users\\hassa\\OneDrive\\Desktop\\Projects\\Quant--order-book-cpp\\orderbook\\orderbook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D26B1DC-363C-4F99-AE04-FA8FC16D2271}|orderbook.vcxproj|solutionrelative:orderbook.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "orderbook.cpp",
+              "DocumentMoniker": "C:\\Users\\hassa\\OneDrive\\Desktop\\Projects\\Quant--order-book-cpp\\orderbook\\orderbook.cpp",
+              "RelativeDocumentMoniker": "orderbook.cpp",
+              "ToolTip": "C:\\Users\\hassa\\OneDrive\\Desktop\\Projects\\Quant--order-book-cpp\\orderbook\\orderbook.cpp*",
+              "RelativeToolTip": "orderbook.cpp*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-03T09:49:10.775Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
