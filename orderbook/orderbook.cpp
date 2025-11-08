@@ -2,11 +2,12 @@
 #include <iostream>
 #include<vector>
 #include<string>
+#include<list>
 using namespace std;
 
 
 enum class OrderType {
-    GoodTillCandle,
+    GoodTillCancel,
     FillOrKill
 };
 
@@ -75,6 +76,62 @@ private:
     Side side_;
     Price price_;
     Quantity initialQuantity_, remainingQuantity_;
+};
+
+using OrderPointer = shared_ptr<Order>;
+using OrderPointers = list<OrderPointer>;
+
+class OrderModify {
+public:
+    OrderModify(OrderId orderId, Side side, Price price, Quantity newQuantity)
+        : orderId_{ orderId }, side_{ side }, price_{ price }, quantity_{ newQuantity }
+    {}
+
+    OrderId GetOrderId() const { return orderId_; }
+    Price GetPrice() const { return price_; }
+    Side GetSide() const { return side_; }
+    Quantity GetQuantity() const { return quantity_; }
+
+    OrderPointer ToOrderPointer(OrderType type) const
+    {
+        return std::make_shared<Order>(type, GetOrderId(), GetSide(), GetPrice(), GetQuantity());
+    }
+
+private:
+    OrderId orderId_;
+    Side side_;
+    Price price_;
+    Quantity quantity_;
+};
+
+struct TradeInfo {
+    OrderId orderId;
+    Price price;
+    Quantity quantity;
+};
+
+class Trade {
+public:
+    Trade(const TradeInfo& bidTrade, const TradeInfo& askTrade)
+        : bidTrade_{bidTrade}, askTrade_{askTrade}
+    { }
+
+    const TradeInfo& GetBidTrade() const { return bidTrade_; }
+    const TradeInfo& GetAskTrade() const { return askTrade_; }
+
+private:
+    TradeInfo bidTrade_;
+    TradeInfo askTrade_;
+};
+
+using Trades = vector<Trade>;
+
+//----------------------------------------
+
+class OrderBook {
+private:
+
+
 };
 
 int main()
